@@ -1,5 +1,7 @@
-import Reveal from "../Animations/Reveal";
-import RevealX from "../Animations/RevealX";
+import Reveal from "../../motions/Reveal";
+import RevealX from "../../motions/RevealX";
+
+
 const Services = ()=>{
 
   return <section className="services" name='Service'>

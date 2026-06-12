@@ -1,4 +1,5 @@
-import RevealX from '../Animations/RevealX'
+import RevealX from "../../../motions/RevealX";
+
 
 const Image=()=>{
   return(
@@ -10,4 +11,4 @@ const Image=()=>{
   )
 }
 
-export default Image
+export default Image;

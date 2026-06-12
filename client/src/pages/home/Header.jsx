@@ -1,7 +1,7 @@
 import { useState,useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-import  phone from "../images/phone.png"
-import Reveal from "../Animations/Reveal";
+import  phone from "../../images/phone.png"
+import Reveal from "../../Animations/Reveal";
 import { useLocation } from "react-router-dom";
 
 const Header=()=>{

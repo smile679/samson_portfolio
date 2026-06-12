@@ -16,7 +16,8 @@ import bokra_02 from "../images/projectImages/bokra_02.png";
 
 
 import ProjectCard from './ProjectCard.jsx';
-import Header from './Header.jsx';
+import Header from './header/Layout.jsx';
+// import Header from '../pages/home/Header.jsx';
 
 
 const Projects = () => {

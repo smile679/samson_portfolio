@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import emailjs from "@emailjs/browser";
-import Reveal from "../Animations/Reveal";
-import RevealX from "../Animations/RevealX";
+import Reveal from "../../motions/Reveal";
+import RevealX from "../../motions/RevealX";
 
 const ContactMe = () => {
   function setMail(mail, action) {
@@ -95,7 +95,12 @@ const ContactMe = () => {
       };
 
       emailjs
-        .send(import.meta.env.VITE_EMAILJS_SERVICE_KEY, import.meta.env.VITE_EMAILJS_TEMPLATE_KEY, templateParams, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_KEY,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_KEY,
+          templateParams,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        )
         .then(() => {
           dispatchError({ type: "reset" });
           dispatchMail({ type: "reset" });
@@ -198,7 +203,13 @@ const ContactMe = () => {
         </Reveal>
         <div>
           <RevealX>
-            <img src={"https://res.cloudinary.com/dineyc77u/image/upload/v1763842914/It_q7ienw.png"} alt="it man" className="w-full" />
+            <img
+              src={
+                "https://res.cloudinary.com/dineyc77u/image/upload/v1763842914/It_q7ienw.png"
+              }
+              alt="it man"
+              className="w-full"
+            />
           </RevealX>
         </div>
       </div>

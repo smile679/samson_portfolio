@@ -1,12 +1,12 @@
-import linkedin from '../images/linkedin.png'
-import behance from '../images/behance.png'
-import tg from '../images/tg.png'
-import whatsapp from '../images/whatsapp.png'
-import instagram from '../images/instagram.png'
-import github from '../images/github.png'
-import RotatingText from '../Animations/RotatingText'
-import Reveal from '../Animations/Reveal'
+import linkedin from '../../../images/linkedin.png'
+import behance from '../../../images/behance.png'
+import tg from '../../../images/tg.png'
+import whatsapp from '../../../images/whatsapp.png'
+import instagram from '../../../images/instagram.png'
+import github from '../../../images/github.png'
 import { useNavigate } from 'react-router-dom'
+import Reveal from '../../../motions/Reveal';
+import RotatingText from '../../../motions/RotatingText';
 
 const Info = () =>{
    const navigate = useNavigate();

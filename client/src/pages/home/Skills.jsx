@@ -1,13 +1,13 @@
-import html33 from '../images/html33.png'
-import react from '../images/react.png'
-import tailwindcss from '../images/tailwindcss.png'
-import Ps from '../images/Ps.png'
-import Ai from '../images/Ai.png'
-import Pr from '../images/Pr.png'
-import Reveal from '../Animations/Reveal'
-import RevealX from '../Animations/RevealX'
-import ProjectOverView from './projectOverView'
-import CountUp from './CountUp'
+import html33 from '../../images/html33.png'
+import react from '../../images/react.png'
+import tailwindcss from '../../images/tailwindcss.png'
+import Ps from '../../images/Ps.png'
+import Ai from '../../images/Ai.png'
+import Pr from '../../images/Pr.png'
+import Reveal from '../../motions/Reveal';
+import RevealX from "../../motions/RevealX";
+import ProjectOverView from '../../components/projectOverView';
+import CountUp from '../../motions/CountUp';
 
 const Skills = ()=>{
 
