@@ -37,7 +37,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:mt-10 gap-5">
         <Reveal>
           <div className="w-full">
-            <p className="text-md text-gray-900 text-shadow-lg leading-relaxed max-md:text-center">
+            <p className="text-[15px] text-gray-900 text-shadow-lg leading-relaxed max-md:text-center">
                 I'm a dedicated <span className="font-semibold text-amber-50"> Full-Stack MERN Developer </span>
                 with strong experience building  <span className="font-semibold">modern, scalable,</span>  and user focused 
                 <span className="font-semibold"> web applications.</span>

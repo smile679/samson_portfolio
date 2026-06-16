@@ -48,7 +48,7 @@ const Info = () =>{
           <TypeIt
             className="para"
             options={{
-              speed: 200,
+              speed: 100,
               waitUntilVisible: true,
             }}   
             getBeforeInit={(instance) => {
