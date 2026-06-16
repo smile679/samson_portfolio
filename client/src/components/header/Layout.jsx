@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import { useLocation } from "react-router-dom";
-import Reveal from "../../motions/Reveal";
-import phone from "../../images/phone.png";
+import Reveal from "@/components/motions/Reveal";
+import phone from "@/assets/images/phone.png";
 
 const Header = () => {
   const menuRef = useRef(null);

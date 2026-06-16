@@ -1,5 +1,5 @@
-import Reveal from "../../motions/Reveal";
-import RevealX from "../../motions/RevealX";
+import Reveal from "@/components/motions/Reveal";
+import RevealX from "@/components/motions/RevealX";
 
 
 const Services = ()=>{

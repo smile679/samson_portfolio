@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import emailjs from "@emailjs/browser";
-import Reveal from "../../motions/Reveal";
-import RevealX from "../../motions/RevealX";
+import Reveal from "@/components/motions/Reveal";
+import RevealX from "@/components/motions/RevealX";
 
 const ContactMe = () => {
   function setMail(mail, action) {

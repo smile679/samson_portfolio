@@ -1,5 +1,5 @@
 import { ChevronsLeftRight, Database, Focus, Globe } from "lucide-react";
-import Reveal from "../../motions/Reveal";
+import Reveal from "@/components/motions/Reveal";
 
 
 

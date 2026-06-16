@@ -1,23 +1,22 @@
 // src/components/Projects.jsx
-import portfolio from '../images/projectImages/portfolio.webp';
-import movieScope from '../images/projectImages/movieScope.webp';
-import movieScope2 from '../images/projectImages/movieScope2.jpg';
-import foodiehome2 from '../images/projectImages/foodiehome2.webp';
-import foodie2 from '../images/projectImages/foodie2.webp';
-import bakeryFront from '../images/projectImages/Bakery_front.jpg';
-import bakeryListing from '../images/projectImages/Bakery_listing.jpg';
-import mobileShop from '../images/projectImages/mobileShop.jpg';
-import mobileShop2 from '../images/projectImages/mobileShop2.jpg';
-import form from '../images/projectImages/form.jpeg';
-import gef_01 from '../images/projectImages/gef_01.jpg';
-import gef_02 from '../images/projectImages/gef_02.jpg';
-import bokra_01 from "../images/projectImages/bokra_01.png";
-import bokra_02 from "../images/projectImages/bokra_02.png";
+// import portfolio from '../images/projectImages/portfolio.webp';
+import movieScope from "@/assets/images/projectImages/movieScope.webp";
+import movieScope2 from "@/assets/images/projectImages/movieScope2.jpg";
+import foodiehome2 from '@/assets/images/projectImages/foodiehome2.webp';
+import foodie2 from "@/assets/images/projectImages/foodie2.webp";
+import bakeryFront from "@/assets/images/projectImages/Bakery_front.jpg";
+import bakeryListing from "@/assets/images/projectImages/Bakery_listing.jpg";
+import mobileShop from "@/assets/images/projectImages/mobileShop.jpg";
+import mobileShop2 from "@/assets/images/projectImages/mobileShop2.jpg";
+import form from "@/assets/images/projectImages/form.jpeg";
+import gef_01 from "@/assets/images/projectImages/gef_01.jpg";
+import gef_02 from "@/assets/images/projectImages/gef_02.jpg";
+import bokra_01 from "@/assets/images/projectImages/bokra_01.png";
+import bokra_02 from "@/assets/images/projectImages/bokra_02.png";
 
 
 import ProjectCard from './ProjectCard.jsx';
 import Header from './header/Layout.jsx';
-// import Header from '../pages/home/Header.jsx';
 
 
 const Projects = () => {
@@ -197,7 +196,7 @@ const Projects = () => {
       githubLink: "https://github.com/smile679/Form-backend-only.git",
     },
   ];
-
+  
   return (
     <section id="projectId" className="max-w-6xl mx-auto min-h-screen flex flex-col py-10 px-5">
       <Header />
