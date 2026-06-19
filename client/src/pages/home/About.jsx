@@ -166,7 +166,7 @@ const About = () => {
             {/* Card 4 — stats full width */}
             <Reveal>
               <div className="flex justify-evenly items-center p-6 rounded-2xl bg-emerald-900/50 border border-white/5">
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col text-center gap-1">
                   <span className="text-2xl font-bold text-emerald-400">
                     <CountUp
                       from={0}
@@ -182,7 +182,7 @@ const About = () => {
                   </span>
                 </div>
                 <div className="w-px h-10 bg-white/10" />
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col text-center gap-1">
                   <span className="text-2xl font-bold text-emerald-400">
                     <CountUp
                       from={0}
@@ -205,7 +205,7 @@ const About = () => {
                   </span>
                 </div>
                 <div className="w-px h-10 bg-white/10" />
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col text-center gap-1">
                   <span className="text-2xl font-bold text-emerald-400">
                     Fast
                   </span>
