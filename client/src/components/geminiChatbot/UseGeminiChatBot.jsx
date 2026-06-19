@@ -9,7 +9,7 @@ export default function useGeminiChat() {
 
  const aboutMe = {
   name: "Samson Gidey",
-  title: "Fullstack Developer (MERN) & Graphics Designer",
+  title: "Fullstack Developer (MERN)",
   
   bio: `I am a passionate full-stack developer who builds modern, responsive, and 
   visually appealing web applications using the MERN stack. I specialize in 

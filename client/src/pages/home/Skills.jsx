@@ -108,50 +108,6 @@ const Skills = ()=>{
           </RevealX>
         </div>
       </div>
-      <div className='w-full flex justify-evenly items-center py-5 mt-10 text-center gap-2 bg-blue-800 rounded-2xl shadow-lg shadow-blue-800/50'>
-        <div className='flex flex-col items-center'>
-          <div className='flex items-center'>
-            <CountUp
-              from={0}
-              to={100}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-gray-900 text-2xl sm:text-4xl md:text-5xl font-bold text-shadow-gray-800 text-shadow-md"
-            />
-            <h3 className='text-3xl ml-2 font-extrabold'>%</h3>
-          </div>
-          <h3 className='text-sm sm:text-xl'>Projects Completed</h3>
-        </div>
-        <div className='flex flex-col items-center'>
-          <div className='flex items-center'>
-            <CountUp
-              from={0}
-              to={10}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-gray-900 text-2xl sm:text-4xl md:text-5xl font-bold text-shadow-gray-800 text-shadow-md"
-            />
-            <h3 className='text-3xl ml-2 font-extrabold'>+</h3>
-          </div>
-          <h3 className='text-sm sm:text-xl'>Website Made</h3>
-        </div>
-        <div className='flex flex-col items-center'>
-          <div className='flex items-center'>
-            <CountUp
-              from={0}
-              to={2}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-gray-900 text-2xl sm:text-4xl md:text-5xl font-bold text-shadow-gray-800 text-shadow-md"
-            />
-            <h3 className='text-3xl ml-2 font-extrabold'>+</h3>
-          </div>
-          <h3 className='text-sm sm:text-xl'>Years of Experiance</h3>
-        </div>
-      </div>
       <ProjectOverView />
     </section>
   )

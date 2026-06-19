@@ -22,6 +22,7 @@
     "react-parallax-tilt": "^1.7.331",
     "react-router-dom": "^7.6.3",
     "react-scroll": "^1.9.3",
+    "react-vertical-timeline-component": "^4.0.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.11",
     "typeit-react": "^2.7.8"
