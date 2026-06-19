@@ -114,10 +114,11 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="contact-me" id="contact-button">
+    <section className="w-full max-w-6xl mx-auto center pt-10 sm:pt-20" id="contact-button">
       <Reveal>
-        <div className="div-cont">
+        <div className="flex flex-row items-center pt-10">
           <svg
+            className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-gray-200 hover:hover:-translate-y-0.5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -131,12 +132,12 @@ const ContactMe = () => {
               clip-rule="evenodd"
             />
           </svg>
-          <h2>
+          <h2 className="text-3xl text-shadow-gray-800 text-shadow-lg tracking-wider">
             Get In <span className="text-emerald-500">Touch</span>
           </h2>
         </div>
       </Reveal>
-      <div className="contact-grid">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <Reveal>
           <div className="w-full px-5 pt-10">
             <form className="center" onSubmit={handleSubmit}>
@@ -149,6 +150,8 @@ const ContactMe = () => {
                   {error.Name}
                 </p>
                 <input
+                  className="w-full text-emerald-600 font-bold bg-gray-200 py-2 sm:py-3 my-3 rounded-md px-3
+                  placeholder:mx-5 outline-none shadow-gray-800 shadow-sm"
                   type="text"
                   placeholder="Your Name"
                   value={mail.Name}
@@ -165,6 +168,8 @@ const ContactMe = () => {
                   {error.Email}
                 </p>
                 <input
+                  className="w-full text-emerald-600 font-bold bg-gray-200 py-2 sm:py-3 my-3 rounded-md px-3
+                  placeholder:mx-5 outline-none shadow-gray-800 shadow-sm"
                   type="email"
                   placeholder="Your Email"
                   value={mail.Email}
@@ -187,6 +192,8 @@ const ContactMe = () => {
                   {mail.Message.length} / 20 Characters
                 </p>
                 <textarea
+                  className="w-full h-30 text-emerald-600 font-bold bg-gray-200 py-3 my-3 rounded-md px-3
+                   placeholder:mx-5 outline-none shadow-gray-800 shadow-md "
                   placeholder="Your Message"
                   value={mail.Message}
                   onChange={(e) =>
@@ -194,7 +201,7 @@ const ContactMe = () => {
                   }
                 />
               </div>
-              <button type="submit" className="button">
+              <button type="submit" className="button w-full my-5">
                 {" "}
                 Send{" "}
               </button>
@@ -204,11 +211,12 @@ const ContactMe = () => {
         <div>
           <RevealX>
             <img
+              className="w-full object-cover drop-shadow-emerald-600 drop-shadow-lg hover:drop-shadow-emerald-500
+              hover:drop-shadow-2xl hover:scale-101"
               src={
                 "https://res.cloudinary.com/dineyc77u/image/upload/v1763842914/It_q7ienw.png"
               }
               alt="it man"
-              className="w-full"
             />
           </RevealX>
         </div>

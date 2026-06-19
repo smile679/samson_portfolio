@@ -1,81 +1,223 @@
-import { ChevronsLeftRight, Database, Focus, Globe } from "lucide-react";
+import {
+  ChevronsLeftRight,
+  CodeXml,
+  Database,
+  Focus,
+  Globe,
+  Sparkles,
+} from "lucide-react";
 import Reveal from "@/components/motions/Reveal";
+import CountUp from "../../components/motions/CountUp";
 
-
+const stats = [
+  { value: "45", label: "Happy Clients" },
+  { value: "2.5", label: "Code Commits" },
+  { value: "500", label: "GitHub Stars" },
+];
 
 const About = () => {
-  const aboutSkills = [{
-    icon : <ChevronsLeftRight />,
-    title : "Frontend Expert",
-    skills : "HTML, CSS, Js ,React,Taiwind CSs and other modern CSS framworks",
-  },
-  {
-    icon : <Database />,
-    title : "Backend Mastery",
-    skills : "NodeJS, ExpressJs, MongoDb, and API architecture",
-  },
-  {
-    icon : <Globe />,
-    title : "Full-Stack Development",
-    skills : "End-to-end application development and deployment",
-  },
-  {
-    icon: <Focus />,
-    title: "Performance Focuse",
-    skills : "Optimaized, scalable, and maintainable solutions",
-  },
-]
-
   return (
-    <section className="about" name="About">
-      <svg class="absolute -top-13 left-0 w-full h-15 rotate-180" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0,0 L110,0C35,150 35,0 0,100z" fill="#059669"></path>
-      </svg>
-      <Reveal>
-        <h1>About Me</h1>
-      </Reveal>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:mt-10 gap-5">
-        <Reveal>
-          <div className="w-full">
-            <p className="text-[15px] text-gray-900 text-shadow-lg leading-relaxed max-md:text-center">
-                I'm a dedicated <span className="font-semibold text-amber-50"> Full-Stack MERN Developer </span>
-                with strong experience building  <span className="font-semibold">modern, scalable,</span>  and user focused 
-                <span className="font-semibold"> web applications.</span>
-                My expertise spans both <span className="font-semibold text-amber-50">frontend and backend development</span>, allowing me to deliver complete 
-                end-to-end solutions from clean, responsive interfaces to secure API architectures and database management.
-                I build with <span className="font-semibold text-amber-50">HTML, CSS, JavaScript, React, Tailwind CSS,
-              Node.js, Express, and MongoDB </span>and I follow clean coding practices, reusable component design, and 
-              performance driven development. I enjoy solving real problems through technology, turning ideas into functional, production-ready applications.
-              I also have experience in UI/UX tools such as <span className="font-semibold text-amber-50">Figma, Illustrator, and Photoshop</span>, 
-              which helps me blend strong visual design with 
-              technical execution to create seamless, intuitive user experiences.
-              <span className="text-amber-50">
-                My goal is to build fast, secure, maintainable applications that deliver real value for users and businesses.
-              </span>
-              </p>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="flex flex-col gap-y-4">
-            {
-              aboutSkills && aboutSkills.map(skill=>(
-                <div className="w-full max-w-lg flex items-center shadow-inner shadow-dark-100 rounded-lg p-2">
-                  <div className="w-13 h-13 flex justify-center items-center rounded-lg shadow-inner shadow-dark-100 px-2">
-                    {skill.icon}
+    <section className="relative w-full bg-emerald-600 px-5 py-20" name="About">
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full flex max-md:flex-col justify-center items-center gap-12">
+          {/* ── Left Column ── */}
+          <div className="flex flex-col flex-1 gap-6 justify-between">
+            {/* Badge */}
+            <Reveal>
+              <div className="py-1.5 px-3 rounded-full inline-flex items-center border border-emerald-500/80 bg-emerald-500/10 gap-2 w-fit">
+                <CodeXml strokeWidth={2.5} className="text-amber-50 w-4 h-4" />
+                <span className="text-amber-50 text-sm font-medium tracking-wide">
+                  Full-Stack Developer
+                </span>
+                <Sparkles strokeWidth={2} className="text-amber-50 w-4 h-4" />
+              </div>
+            </Reveal>
+
+            {/* Heading */}
+            <Reveal>
+              <h2 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-white">
+                Crafting Digital <br />
+                Experiences That Matter
+              </h2>
+            </Reveal>
+
+            {/* Bio paragraphs */}
+            <Reveal>
+              <div className="flex flex-col gap-4">
+                <p className="text-[15px] text-amber-50 leading-relaxed">
+                  I'm a dedicated{" "}
+                  <span className="text-white font-medium">
+                    Full-Stack MERN Developer
+                  </span>{" "}
+                  with strong experience building modern, scalable, and
+                  user-focused web applications. I deliver complete end-to-end
+                  solutions — from clean responsive interfaces to secure API
+                  architectures.
+                </p>
+                <p className="text-[15px] text-amber-50 leading-relaxed">
+                  My stack includes{" "}
+                  <span className="text-white font-semibold">
+                    React, Tailwind CSS, Node.js, Express, and MongoDB
+                  </span>
+                  . I follow clean coding practices, reusable component design,
+                  and performance-driven development.
+                </p>
+                <p className="text-[15px] text-amber-50 leading-relaxed">
+                  I also work with{" "}
+                  <span className="text-white font-semibold">
+                    Figma, Illustrator, and Photoshop
+                  </span>
+                  , blending strong visual design with technical execution to
+                  create seamless, intuitive user experiences.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Stats — left-border divider style */}
+            <Reveal>
+              <div className="flex items-center gap-0 mt-2">
+                {stats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col gap-1 pl-4 pr-8 border-l-2 border-emerald-500"
+                  >
+                    <span className="text-3xl font-bold text-white">
+                      <CountUp
+                        from={0}
+                        to={stat.value}
+                        separator=","
+                        direction="up"
+                        duration={1}
+                        className="text-3xl font-bold text-white"
+                      />
+                      +
+                    </span>
+                    <span className="text-sm text-amber-50 font-light">
+                      {stat.label}
+                    </span>
                   </div>
-                  <div className="flex flex-col justify-start items-start ml-5">
-                    <h3>{skill.title}</h3>
-                    <p className="text-sm text-gray-900 text-shadow-lg leading-relaxed py-2">{skill.skills}</p>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+
+          {/* ── Right Column ── */}
+          <div className="flex flex-1 flex-col gap-3">
+            {/* Card 1 — full width */}
+            <Reveal>
+              <div className="flex items-center gap-5 p-6 rounded-2xl bg-emerald-900/50 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300">
+                <div className="shrink-0 bg-emerald-500/15 p-3 rounded-xl">
+                  <CodeXml
+                    strokeWidth={2}
+                    className="text-emerald-400 w-5 h-5"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="text-base font-semibold text-white tracking-wide">
+                    Expertise
+                  </h3>
+                  <p className="text-sm text-amber-50 font-light leading-relaxed">
+                    Specialized in building scalable web applications with
+                    modern technologies and best practices.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Cards 2 & 3 — half width side by side */}
+            <Reveal>
+              <div className="flex gap-3">
+                <div className="flex flex-col gap-4 p-6 rounded-2xl bg-emerald-900/50 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300 flex-1">
+                  <div className="bg-emerald-500/15 p-3 rounded-xl w-fit">
+                    <ChevronsLeftRight
+                      strokeWidth={2}
+                      className="text-emerald-400 w-5 h-5"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <h3 className="text-base font-semibold text-white tracking-wide">
+                      Clean Code
+                    </h3>
+                    <p className="text-sm text-amber-50 font-light leading-relaxed">
+                      Writing maintainable, well-documented code that scales.
+                    </p>
                   </div>
                 </div>
-              ))
-            }
+
+                <div className="flex flex-col gap-4 p-6 rounded-2xl bg-emerald-900/50 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300 flex-1">
+                  <div className="bg-emerald-500/15 p-3 rounded-xl w-fit">
+                    <Focus
+                      strokeWidth={2}
+                      className="text-emerald-400 w-5 h-5"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <h3 className="text-base font-semibold text-white tracking-wide">
+                      Performance
+                    </h3>
+                    <p className="text-sm text-amber-50 font-light leading-relaxed">
+                      Optimizing for speed and efficiency in every project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Card 4 — stats full width */}
+            <Reveal>
+              <div className="flex justify-evenly items-center p-6 rounded-2xl bg-emerald-900/50 border border-white/5">
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-2xl font-bold text-emerald-400">
+                    <CountUp
+                      from={0}
+                      to={100}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                    />
+                    %
+                  </span>
+                  <span className="text-sm text-amber-50 font-light">
+                    Client Satisfaction
+                  </span>
+                </div>
+                <div className="w-px h-10 bg-white/10" />
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-2xl font-bold text-emerald-400">
+                    <CountUp
+                      from={0}
+                      to={24}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                    />
+                    /
+                    <CountUp
+                      from={0}
+                      to={7}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                    />
+                  </span>
+                  <span className="text-sm text-amber-50 font-light">
+                    Support Available
+                  </span>
+                </div>
+                <div className="w-px h-10 bg-white/10" />
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-2xl font-bold text-emerald-400">
+                    Fast
+                  </span>
+                  <span className="text-sm text-amber-50 font-light">
+                    Delivery Time
+                  </span>
+                </div>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </div>
-      <svg class="absolute -bottom-13 left-0 w-full h-15 " viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0,0 L110,0C35,150 35,0 0,100z" fill="#059669"></path>
-      </svg>
     </section>
   );
 };

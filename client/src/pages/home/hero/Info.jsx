@@ -18,7 +18,7 @@ const Info = () =>{
    }
 
   return (
-    <div className="info">
+    <div className="w-full flex flex-col mx-auto max-md:items-center gap-5 mt-5 md:mt-15">
       <Reveal>
         <div className="flex flex-col max-md-items-center md:pl-10">
           <h2 className="text-gray-200 text-xl font-bold">Hello , I'm</h2>
@@ -48,9 +48,9 @@ const Info = () =>{
           <TypeIt
             className="para"
             options={{
-              speed: 100,
+              speed: 50,
               waitUntilVisible: true,
-            }}   
+            }}
             getBeforeInit={(instance) => {
               instance
                 .type(`" I build modern, secure, nnd<br/>`, { delay: 300 })

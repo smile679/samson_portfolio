@@ -1,27 +1,28 @@
 import RevealX from "@/components/motions/RevealX";
 import Tilt from "react-parallax-tilt";
+import smile2 from "@/assets/images/smile2.png"
 
-const Image=()=>{
+const Image = () => {
   return (
-    <div className="image">
+    <div
+      className="w-full flex justify-center items-start drop-shadow-[#3EB489] drop-shadow-2xl
+      bg-[url('./images/code.png')] bg-cover bg-no-repeat bg-blend-overlay p-10 overflow-hidden"
+    >
       <RevealX>
         <Tilt
-        className="cursor-pointer"
+          className="cursor-pointer"
           perspective={500}
-          // glareEnable={true}
-          // glareMaxOpacity={0.45}
           scale={1.05}
         >
           <img
-            src={
-              "https://res.cloudinary.com/dineyc77u/image/upload/v1763844322/smile_phcyvp.webp"
-            }
+          className="rounded-full p-5 sm:p-10 md:p-10 border-amber-50 border-2 border-b-foreground"
+            src={smile2}
             alt="image"
           />
         </Tilt>
       </RevealX>
     </div>
   );
-}
+};
 
 export default Image;

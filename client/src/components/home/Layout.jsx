@@ -10,7 +10,7 @@ import Header from "../header/Layout";
 const Home = ()=>{
 
   return (
-    <section className="home">
+    <section className="relative w-full flex flex-col items-center scroll-smooth snap-none">
       <Header />
       <Hero />
       <About />
