@@ -31,7 +31,7 @@ const Info = () =>{
             delay={200}
             animateBy="words"
             direction="top"
-            className="text-emerald-500 sm:tracking-wider text-4xl xs:text-5xl font-bold text-center sm:text-6xl md:text-5xl lg:text-6xl"
+            className="font-bold text-emerald-500 sm:tracking-wider text-4xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-6xl text-shadow-emerald-400 text-shadow-sm"
           />
           <h2 className="text-emerald-500 font-extrabold -tracking-tighter flex justify-items-center items-center">
             <RotatingText

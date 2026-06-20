@@ -137,7 +137,7 @@ const ContactMe = () => {
           </h2>
         </div>
       </Reveal>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2">
         <Reveal>
           <div className="w-full px-5 pt-10">
             <form className="center" onSubmit={handleSubmit}>
@@ -216,7 +216,7 @@ const ContactMe = () => {
               src={
                 "https://res.cloudinary.com/dineyc77u/image/upload/v1763842914/It_q7ienw.png"
               }
-              alt="it man"
+              alt="contact us image"
             />
           </RevealX>
         </div>
