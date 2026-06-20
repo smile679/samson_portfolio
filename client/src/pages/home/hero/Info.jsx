@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import Reveal from "@/components/motions/Reveal";
 import RotatingText from "@/components/motions/RotatingText";
 import TypeIt from "typeit-react";
+import BlurText from "../../../components/motions/BlurText";
 // import Reveal from "../../../motions/Reveal";
 
 const Info = () =>{
@@ -22,9 +23,16 @@ const Info = () =>{
       <Reveal>
         <div className="flex flex-col max-md-items-center md:pl-10">
           <h2 className="text-gray-200 text-xl font-bold">Hello , I'm</h2>
-          <h1 className="flex flex-col sm:flex-row text-shadow-white text-shadow-2xs">
-            <span className="text-nowrap"> SAMSON GIDEY</span>
-          </h1>
+          {/* <h1 className=" text-shadow-white text-shadow-2xs text-nowrap">
+            SAMSON GIDEY
+          </h1> */}
+          <BlurText
+            text="SAMSON GIDEY"
+            delay={200}
+            animateBy="words"
+            direction="top"
+            className="text-emerald-500 sm:tracking-wider text-4xl xs:text-5xl font-bold text-center sm:text-6xl md:text-5xl lg:text-6xl"
+          />
           <h2 className="text-emerald-500 font-extrabold -tracking-tighter flex justify-items-center items-center">
             <RotatingText
               texts={["WEBSITE", "FULLSTACK"]}

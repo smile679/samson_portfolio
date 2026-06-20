@@ -1,71 +1,271 @@
+import {
+  ChevronsLeftRight,
+  Database,
+  Globe,
+  Figma,
+  CheckCircle2,
+  Layers,
+  Star,
+} from "lucide-react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import Reveal from "@/components/motions/Reveal";
-import RevealX from "@/components/motions/RevealX";
 
 
-const Services = ()=>{
+const CARD_BG = "rgba(15, 30, 40, 0.2)";
+const CARD_BORDER = "1px solid rgba(94, 234, 212, 0.18)";
+const ICON_BG = "rgba(52, 211, 153, 0.2)";
+const TEAL = "#5eead4";
+const TEAL_MID = "#2dd4bf";
+// const SPINE = "rgba(94, 234, 212, 0.3)";
+const SPINE = "rgb(52, 211, 153)";
 
-  return <section className="services" name='Service'>
-    <Reveal>
-    <div className="div-ser">
-      <svg data-slot="icon" fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"></path>
-      </svg>
-      <h1>SERVICE</h1>
-    </div>
-    </Reveal>
-    <div className="service-list">
-      <RevealX>
-      <div>
-         <h3>FRONTEND DEVELOPMENT</h3>
-        <ul>
-          <li className="list-none">💻 What I can help you with:</li>
-          <li>Building UIs with Tailwind CSS and React</li>
-          <li>Debugging layout issues and improving existing code</li>
-          <li>Creating responsive websites using HTML, CSS, and JavaScript</li>
-          <li>Converting designs from Figma into pixel-perfect web pages</li>
-        </ul>
+const services = [
+  {
+    number: "01",
+    icon: (
+      <ChevronsLeftRight
+        strokeWidth={1.8}
+        className="w-5 h-5"
+        style={{ color: TEAL }}
+      />
+    ),
+    title: "Frontend Development",
+    tagline: "Interfaces that look sharp and feel fast.",
+    bullets: [
+      "Responsive UIs with React, Tailwind CSS & shadcn/ui",
+      "Figma-to-code pixel-perfect fidelity, every time",
+      "Component-driven architecture with reusable design systems",
+      "Performance: lazy loading, code splitting & Core Web Vitals",
+      "Smooth animations with Framer Motion & CSS transitions",
+    ],
+  },
+  {
+    number: "02",
+    icon: (
+      <Database strokeWidth={1.8} className="w-5 h-5" style={{ color: TEAL }} />
+    ),
+    title: "Backend Development",
+    tagline: "Secure, scalable APIs built to last.",
+    bullets: [
+      "RESTful API design with Node.js & Express",
+      "JWT auth, bcrypt hashing, role & permission systems",
+      "MongoDB schema design, indexing & aggregation pipelines",
+      "Input validation, structured error handling & logging",
+      "Third-party integrations: payment, email, cloud storage",
+    ],
+  },
+  {
+    number: "03",
+    icon: (
+      <Globe strokeWidth={1.8} className="w-5 h-5" style={{ color: TEAL }} />
+    ),
+    title: "Full-Stack MERN Projects",
+    tagline: "End-to-end ownership from database to deploy.",
+    bullets: [
+      "Full-stack builds: React frontend + Express/MongoDB backend",
+      "Auth flows: registration, login & protected route systems",
+      "Admin dashboards & real-time data with live updates",
+      "Deployment to Vercel, Render or Railway with CI/CD",
+      "Clean handoff: documentation, Git history & code review",
+    ],
+  },
+  {
+    number: "04",
+    icon: (
+      <Figma strokeWidth={1.8} className="w-5 h-5" style={{ color: TEAL }} />
+    ),
+    title: "UI/UX & Figma-to-Code",
+    tagline: "Design that bridges vision and implementation.",
+    bullets: [
+      "Wireframing & high-fidelity prototyping in Figma",
+      "Design system creation: tokens, components & style guides",
+      "Converting Figma designs to production-ready React code",
+      "Accessibility audits (WCAG 2.1 AA) & keyboard navigation",
+      "Cross-browser & cross-device QA testing",
+    ],
+  },
+];
+
+const Services = () => {
+  return (
+    <section
+      style={{
+        background: "linear-gradient(to bottom right, #1f2937, #0f766e)",
+      }}
+      className="relative w-full px-5 py-20"
+      name="Service"
+    >
+      {/* ── Section Header ── */}
+      <div className="w-full max-w-6xl mx-auto flex flex-col gap-4 mb-6">
+        <Reveal>
+          <div
+            className="py-1.5 px-3 rounded-full inline-flex items-center gap-2 w-fit"
+            style={{
+              border: "1px solid rgba(94,234,212,0.35)",
+              background: "rgba(94,234,212,0.08)",
+            }}
+          >
+            <Layers
+              strokeWidth={2}
+              className="w-4 h-4"
+              style={{ color: TEAL }}
+            />
+            <span
+              className="text-sm font-medium tracking-wide"
+              style={{ color: TEAL }}
+            >
+              What I Do
+            </span>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
+              Services &amp; <br className="max-md:hidden" />
+              Expertise
+            </h2>
+            <p
+              className="text-[15px] leading-relaxed md:text-right max-w-sm"
+              style={{ color: "rgba(204,251,241,0.65)" }}
+            >
+              Core capabilities focused entirely on the MERN stack and modern
+              web development.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div
+            className="w-full h-px mt-2"
+            style={{ background: "rgba(94,234,212,0.15)" }}
+          />
+        </Reveal>
       </div>
-      </RevealX>
-      <Reveal>
-        <div>
-          <h3>BACKEND DEVELOPMENT</h3>
-          <ul>
-            <li className="list-none">💻 What I can help you with:</li>
-            <li>Building RESTful APIs using Node.js and Express</li>
-            <li>Implementing authentication & authorization (JWT, bcrypt, roles, permissions)</li>
-            <li>Creating secure and scalable backend architectures</li>
-            <li>Handling server-side logic, validation, and error management</li>
-            <li>Designing and managing databases with MongoDB</li>
-        </ul>
-        </div>
-      </Reveal>
-    </div>
-    <div className="service-list">
-      <Reveal>
-      <div>
-        <h3>GRAPHICS DESIGN</h3>
-        <ul>
-          <li className="list-none">🖌 What I can help you with:</li>
-          <li>Creating clean, professional UI mockups in Figma</li>
-          <li>Designing logos, banners, and social media graphics</li>
-          <li>Editing and retouching images using Photoshop</li>
-        </ul>
+
+      {/* ── Timeline ── */}
+      <VerticalTimeline lineColor={SPINE}>
+        {services.map((service, i) => (
+          <VerticalTimelineElement
+            key={i}
+            contentStyle={{
+              background: CARD_BG,
+              border: CARD_BORDER,
+              borderRadius: "1rem",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
+              padding: "1.75rem",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+            contentArrowStyle={{
+              borderRight: `7px solid rgba(94,234,212,0.18)`,
+            }}
+            date={
+              <span
+                style={{
+                  color: TEAL,
+                  fontFamily: "monospace",
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.15em",
+                  opacity: 0.85,
+                }}
+              >
+                {service.number}
+              </span>
+            }
+            iconStyle={{
+              background: ICON_BG,
+              border: `2px solid rgba(94,234,212,0.4)`,
+              boxShadow: `0 0 0 3px rgba(94,234,212,0.1)`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backdropFilter: "blur(8px)",
+            }}
+            icon={service.icon}
+          >
+            {/* ── Card content ── */}
+            <div className="flex flex-col gap-4 ">
+              {/* Title + tagline */}
+              <div className="flex flex-col gap-1">
+                <h3 className="text-base font-semibold text-white tracking-wide m-0">
+                  {service.title}
+                </h3>
+                <p className="text-sm font-light italic m-0 text-gray-300">
+                  {service.tagline}
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-gray-200/50" />
+
+              <ul className="flex flex-col gap-2.5 m-0 p-0">
+                {service.bullets.map((item, j) => (
+                  <li
+                    key={j}
+                    className="flex items-start text-teal-100/75 gap-2.5 text-sm leading-relaxed list-none"
+                  >
+                    <CheckCircle2
+                      strokeWidth={1.5}
+                      className="w-4 h-4 mt-0.5 shrink-0 text-teal-500"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </VerticalTimelineElement>
+        ))}
+
+        <VerticalTimelineElement
+          iconStyle={{
+            background: TEAL_MID,
+            border: "none",
+            boxShadow: `0 0 0 4px rgba(94,234,212,0.2), 0 0 24px rgba(94,234,212,0.35)`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          icon={
+            <Star
+              strokeWidth={2}
+              className="w-4 h-4"
+              style={{ color: "#0f2027" }}
+            />
+          }
+        />
+      </VerticalTimeline>
+
+      {/* ── CTA Strip ── */}
+      <div className="w-full max-w-6xl mx-auto mt-8">
+        <Reveal>
+          <div
+            className="flex flex-col sm:flex-row items-center justify-between bg-slate-900/45 gap-5 p-6 rounded-2xl border-teal-300/50 border-[1px]
+            backdrop-blur-sm"
+          >
+            <div className="flex flex-col gap-1 text-center sm:text-left">
+              <h4 className="text-white font-semibold text-base">
+                Have a project in mind?
+              </h4>
+              <p className="text-sm text-teal-200">
+                Let's talk about what you're building and how I can help.
+              </p>
+            </div>
+            <a
+              href="#contact-button"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-200
+              bg-emerald-400 hover:bg-emerald-500 hover:cursor-pointer"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </Reveal>
       </div>
-      </Reveal>
-      <RevealX>
-      <div>
-        <h3><span>Bonus:-</span> SOCIAL MEDIA MARKETING</h3>
-        <ul>
-          <li className="list-none">🚀 What I can help you with</li>
-          <li>Social Media management</li>
-          <li>Facebook Ads (Meta Ads Manager)</li>
-          <li>Designing branded posts using Canva or Photoshop</li>
-        </ul>
-      </div>
-      </RevealX>
-    </div>
-    
-  </section>
-}
+    </section>
+  );
+};
 
 export default Services;

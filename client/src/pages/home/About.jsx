@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Reveal from "@/components/motions/Reveal";
 import CountUp from "../../components/motions/CountUp";
+import BlurText from "../../components/motions/BlurText";
 
 const stats = [
   { value: "45", label: "Happy Clients" },
@@ -35,10 +36,13 @@ const About = () => {
 
             {/* Heading */}
             <Reveal>
-              <h2 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-white">
-                Crafting Digital <br />
-                Experiences That Matter
-              </h2>
+              <BlurText
+                text="Crafting Digital Experiences That Matter"
+                delay={200}
+                animateBy="words"
+                direction="top"
+                className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-white"
+              />
             </Reveal>
 
             {/* Bio paragraphs */}
@@ -51,7 +55,7 @@ const About = () => {
                   </span>{" "}
                   with strong experience building modern, scalable, and
                   user-focused web applications. I deliver complete end-to-end
-                  solutions — from clean responsive interfaces to secure API
+                  solutions from clean responsive interfaces to secure API
                   architectures.
                 </p>
                 <p className="text-[15px] text-amber-50 leading-relaxed">
