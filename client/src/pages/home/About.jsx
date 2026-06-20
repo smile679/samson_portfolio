@@ -79,7 +79,7 @@ const About = () => {
 
             {/* Stats — left-border divider style */}
             <Reveal>
-              <div className="flex items-center gap-0 mt-2">
+              <div className="w-full h-20 flex justify-between items-center gap-0 mt-2 overflow-hidden">
                 {stats.map((stat, i) => (
                   <div
                     key={i}
@@ -109,7 +109,7 @@ const About = () => {
           <div className="flex flex-1 flex-col gap-3">
             {/* Card 1 — full width */}
             <Reveal>
-              <div className="flex items-center gap-5 p-6 rounded-2xl bg-emerald-900/50 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300">
+              <div className="w-full h-full flex items-center gap-5 p-6 rounded-2xl bg-emerald-900/45 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300">
                 <div className="shrink-0 bg-emerald-500/15 p-3 rounded-xl">
                   <CodeXml
                     strokeWidth={2}
@@ -131,7 +131,7 @@ const About = () => {
             {/* Cards 2 & 3 — half width side by side */}
             <Reveal>
               <div className="flex gap-3">
-                <div className="flex flex-col gap-4 p-6 rounded-2xl bg-emerald-900/50 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300 flex-1">
+                <div className="flex flex-col gap-4 p-6 rounded-2xl bg-emerald-900/45 border border-white/5 hover:border-emerald-500/30 transition-colors duration-300 flex-1">
                   <div className="bg-emerald-500/15 p-3 rounded-xl w-fit">
                     <ChevronsLeftRight
                       strokeWidth={2}
@@ -169,7 +169,7 @@ const About = () => {
 
             {/* Card 4 — stats full width */}
             <Reveal>
-              <div className="flex justify-evenly items-center p-6 rounded-2xl bg-emerald-900/50 border border-white/5">
+              <div className="flex justify-evenly items-center p-6 rounded-2xl bg-emerald-900/45 border border-white/5">
                 <div className="flex flex-col text-center gap-1">
                   <span className="text-2xl font-bold text-emerald-400">
                     <CountUp
