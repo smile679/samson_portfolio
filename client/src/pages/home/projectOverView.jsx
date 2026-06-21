@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { MdOutlineSelectAll } from "react-icons/md";
-import { FaGithub } from "react-icons/fa6";
-import { MdOutlineLiveTv } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { FaLaptopCode } from "react-icons/fa";
 import { useState } from "react";
-import { FaPhoenixFramework } from "react-icons/fa6";
 import { SiCloudflareworkers } from "react-icons/si";
-import Reveal from "./motions/Reveal";
-import BlurText from "./motions/BlurText";
+import Reveal from "../../components/motions/Reveal";
+import BlurText from "../../components/motions/BlurText";
 import Tilt from "react-parallax-tilt";
+import MenuCard from "../../components/MenuCard";
 
 function ProjectOverView() {
   const [menu, setMenu] = useState("all");
@@ -24,6 +22,7 @@ function ProjectOverView() {
       link: "https://ecommerce-app-1-q5og.onrender.com/",
       github: "https://github.com/smile679/eCommerce-app.git",
       category: "fullstack",
+      tags: ["React", "Node.js", "MongoDB", "Tailwind"],
     },
     {
       title: "Bakery Full-Stack App",
@@ -34,6 +33,7 @@ function ProjectOverView() {
       link: "https://bakery-full-stack-webisite-front.onrender.com/",
       github: "https://github.com/smile679/Bakery-Full-stack-Webisite.git",
       category: "fullstack",
+      tags: ["React", "Node.js", "MongoDB", "Tailwind"],
     },
     {
       title: "Foodie Delight",
@@ -44,6 +44,7 @@ function ProjectOverView() {
       link: "https://foodiedelightapp.netlify.app/",
       github: "https://github.com/smile679/Foodie-Delight.git",
       category: "static",
+      tags: ["React", "Tailwind"],
     },
     {
       title: "Movie Scope",
@@ -54,6 +55,7 @@ function ProjectOverView() {
       link: "https://moviescopapp.netlify.app/",
       github: "https://github.com/smile679/Movie-App.git",
       category: "static",
+      tags: ["React", "Tailwind"],
     },
     {
       title: "Foodie",
@@ -64,6 +66,7 @@ function ProjectOverView() {
       link: "https://foodiedelightapp.netlify.app/",
       github: "https://github.com/smile679/Foodie-Delight.git",
       category: "static",
+      tags: ["React", "Tailwind"],
     },
     {
       title: "Scope",
@@ -74,44 +77,10 @@ function ProjectOverView() {
       link: "https://moviescopapp.netlify.app/",
       github: "https://github.com/smile679/Movie-App.git",
       category: "static",
+      tags: ["React", "Tailwind"],
     },
   ];
 
-  const MenuCard = ({ item }) => {
-    return (
-      <div className="relative w-full h-full md:max-w-md bg-emerald-900/45 border-emerald-500/30 border-[1px] backdrop-blur-md rounded-2xl overflow-hidden ">
-        <a href={item.link} target="_blank">
-          <img
-            src={item.image}
-            className="w-full max-h-70 object-cover transition-all duration-200"
-          />
-        </a>
-        <div className="w-full flex justify-between items-center px-5 py-2">
-          <h3 className="text-sm">{item.title}</h3>
-          <div className="flex justify-center items-center gap-3">
-            <a href={item.link} target="_blank">
-              <MdOutlineLiveTv
-                size={25}
-                className="hover:scale-115 cursor-pointer"
-              />
-            </a>
-            <a href={item.github} target="_blank">
-              <FaGithub size={25} className="hover:scale-115" />
-            </a>
-          </div>
-        </div>
-        <div className="w-full h-[0.5px] bg-teal-200/50 mb-2"/>
-        <p className="text-sm font-medium text-start text-white/80 px-5 pb-2">
-          {item.shortDescription}
-        </p>
-        <div className="absolute top-3 right-2 py-0.5 px-3 bg-emerald-900 rounded-full inline-flex items-center border border-emerald-500/80 gap-2">
-          <p className="text-amber-50 text-sm font-medium tracking-wide">
-            {item.category}
-          </p>
-        </div>
-      </div>
-    );
-  };
 
   const filteredProjects =
     menu === "all"
@@ -204,8 +173,10 @@ function ProjectOverView() {
         </div>
         <Link
           to="/projects"
-          className="pt-10 text-white hover:text-emerald-800 font-semibold hover:underline cursor-pointer"
+          className="mt-10 py-0.5 px-3 text-emerald-200 text-md font-mono tracking-wide rounded-full inline-flex items-center gap-1.5
+        bg-emerald-900/85 border border-emerald-400/45 backdrop-blur-md hover:scale-110"
         >
+        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full shrink-0 animate-caret-blink" />
           See More
         </Link>
       </div>
