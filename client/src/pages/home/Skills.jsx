@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/motions/Reveal";
 import RevealX from "@/components/motions/RevealX";
-import ProjectOverView from "@/components/projectOverView";
 import { Sparkles, Paintbrush2, Image as ImageIcon, Globe } from "lucide-react";
 import {
   SiHtml5,
@@ -292,10 +291,7 @@ const Skills = () => (
             direction="top"
             className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-white"
           />
-          <p
-            className="text-[15px] max-w-md leading-relaxed"
-            style={{ color: "rgba(167,243,208,0.65)" }}
-          >
+          <p className="text-[15px] max-w-md leading-relaxed text-emerald-200/65">
             A comprehensive overview of my technical skills and proficiency
             levels.
           </p>
