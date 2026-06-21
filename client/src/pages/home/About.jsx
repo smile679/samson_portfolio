@@ -21,7 +21,7 @@ const About = () => {
     <section className="relative w-full bg-emerald-600 px-5 py-20" name="About">
       <div className="w-full max-w-6xl mx-auto">
         <div className="w-full flex max-md:flex-col justify-center items-center gap-12">
-          {/* ── Left Column ── */}
+          {/*  Left Column  */}
           <div className="flex flex-col flex-1 gap-6 justify-between">
             {/* Badge */}
             <Reveal>
@@ -41,7 +41,7 @@ const About = () => {
                 delay={200}
                 animateBy="words"
                 direction="top"
-                className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-white"
+                className="text-5xl font-semibold leading-tight tracking-tight text-white"
               />
             </Reveal>
 

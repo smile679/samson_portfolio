@@ -5,7 +5,7 @@ import Services from "../../pages/home/Services";
 import Skills from "../../pages/home/Skills";
 import GeminiChatbot from "../geminiChatbot/GeminiChatBot";
 import Header from "../header/Layout";
-// import ProjectOverView from "../projectOverView";
+import ProjectOverView from "../projectOverView";
 
 
 const Home = ()=>{
@@ -17,7 +17,7 @@ const Home = ()=>{
       <About />
       <Services />
       <Skills />
-      {/* <ProjectOverView /> */}
+      <ProjectOverView />
       <ContactMe />
       <GeminiChatbot />
     </section>

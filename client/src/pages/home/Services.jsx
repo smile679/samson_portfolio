@@ -126,7 +126,7 @@ const Services = () => {
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
-              Services &amp; <br className="max-md:hidden" />
+              Services & <br className="max-md:hidden" />
               Expertise
             </h2>
             <p
@@ -206,11 +206,11 @@ const Services = () => {
                 {service.bullets.map((item, j) => (
                   <li
                     key={j}
-                    className="flex items-start text-teal-100/75 gap-2.5 text-sm leading-relaxed list-none"
+                    className="flex items-start text-teal-100/80 gap-2.5 text-sm leading-relaxed list-none"
                   >
                     <CheckCircle2
                       strokeWidth={1.5}
-                      className="w-4 h-4 mt-0.5 shrink-0 text-teal-500"
+                      className="w-4 h-4 mt-0.5 shrink-0 text-emerald-400"
                     />
                     <span>{item}</span>
                   </li>
@@ -222,20 +222,14 @@ const Services = () => {
 
         <VerticalTimelineElement
           iconStyle={{
-            background: TEAL_MID,
+            background: "rgb(52, 211, 153)",
             border: "none",
             boxShadow: `0 0 0 4px rgba(94,234,212,0.2), 0 0 24px rgba(94,234,212,0.35)`,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
-          icon={
-            <Star
-              strokeWidth={2}
-              className="w-4 h-4"
-              style={{ color: "#0f2027" }}
-            />
-          }
+          icon={<Star strokeWidth={2} className="w-4 h-4 text-white" />}
         />
       </VerticalTimeline>
 
