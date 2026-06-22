@@ -63,7 +63,7 @@
 }
 
 @layer components {
-  .wrapper {
+  /* .wrapper {
     @apply w-full fixed top-0 left-0 z-10 px-5 py-3 shadow-lg backdrop-blur-md;
 
     & nav {
@@ -80,7 +80,7 @@
       text-shadow-emerald-600/50 hover:text-shadow-lg hover:scale-110;
     }
 
-  }
+  } */
 
   .contact {
     @apply relative flex flex-row justify-center items-center bg-[#3EB489] rounded-full pl-8 p-2 box-border cursor-pointer
@@ -117,9 +117,9 @@
 }
 }
 
-@utility nav-list {
+/* @utility nav-list {
     @apply hover:text-[#3EB489] text-white hover:-translate-y-0.5 cursor-pointer px-15 py-5;
-  }
+  } */
 
 @utility center {
     @apply flex justify-center items-center flex-col;

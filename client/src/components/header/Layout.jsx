@@ -3,91 +3,71 @@ import { Link } from "react-scroll";
 import { useLocation } from "react-router-dom";
 import Reveal from "@/components/motions/Reveal";
 import phone from "@/assets/images/phone.png";
+import { FaLaptopCode } from "react-icons/fa";
+import { Home } from "lucide-react";
+import { MdOutlineMenuOpen } from "react-icons/md";
+
+import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import { MdClose } from "react-icons/md";
 
 const Header = () => {
-  const menuRef = useRef(null);
-  const buttonRef = useRef(null);
-  const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
 
-  const handleTouchOutside = (event) => {
-    const isInsideMenu = menuRef.current?.contains(event.target);
-    const isInsideButton = buttonRef.current?.contains(event.target);
-
-    if (!isInsideMenu && !isInsideButton) {
-      setShowMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleTouchOutside);
-    document.addEventListener("touchstart", handleTouchOutside); // for mobile
-
-    return () => {
-      document.removeEventListener("mousedown", handleTouchOutside);
-      document.removeEventListener("touchstart", handleTouchOutside);
-    };
-  }, []);
+  const menu = [
+    {
+      to: "Hero",
+      title: "Home",
+    },
+    {
+      to: "About",
+      title: "About",
+    },
+    {
+      to: "Service",
+      title: "Service",
+    },
+    {
+      to: "Skills",
+      title: "Skills",
+    },
+    {
+      to: "Contact",
+      title: "Contact",
+    },
+  ];
 
   return (
-    <header className="wrapper">
-      <nav>
+    <header className="w-full fixed top-0 left-0 z-10 px-5 py-3 shadow-lg backdrop-blur-md">
+      <nav className="max-w-6xl mx-auto hidden sm:flex items-center justify-between">
         <a href="/">
-          <h2>
+          <h2 className="flex items-center gap-2 sm:ml-5 text-2xl font-bold text-amber-50">
+            <FaLaptopCode />
             Portfolio<span className="animate-ping">..</span>
           </h2>
         </a>
         {location.pathname === "/projects" ? null : (
           <Reveal>
-            <ul>
-              <li>
-                <Link
-                  activeClass="text-[#45f8b7] border-b-2 pb-0.5"
-                  to="Hero"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-75}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="text-[#45f8b7] border-b-2"
-                  to="About"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-75}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="text-[#45f8b7] border-b-2"
-                  to="Service"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-75}
-                >
-                  Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="text-[#45f8b7] border-b-2"
-                  to="Skills"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-75}
-                >
-                  Skils
-                </Link>
-              </li>
+            <ul className="flex sm:gap-6  text-lg">
+              {menu &&
+                menu.map((item) => (
+                  <li
+                    key={item.to}
+                    className="font-bold text-[#3EB489] hover:text-[#45f8b7]  hover:-translate-y-0.5 cursor-pointer
+                      text-shadow-emerald-600/50 hover:text-shadow-lg hover:scale-110"
+                  >
+                    <Link
+                      activeClass="text-[#45f8b7] border-b-2 pb-0.5"
+                      to={item.to}
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      offset={-75}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </Reveal>
         )}
@@ -106,100 +86,64 @@ const Header = () => {
         )}
       </nav>
 
-      <nav className="flex sm:hidden">
-        <h2>
-          Portfolio<span className="animate-ping pl-2">..</span>
-        </h2>
-        <button
-          ref={buttonRef}
-          className="cursor-pointer bg-[#3EB489] p-1 rounded-md shadow-emerald-600/50 shadow-lg"
-          onClick={() => setShowMenu((preArr) => !preArr)}
-        >
-          <svg
-            class="w-10 h-10 text-gray-800 dark:text-white hover:text-[#3EB489]"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-width="2"
-              d="M5 7h14M5 12h14M5 17h14"
-            />
-          </svg>
-        </button>
+      <nav className="w-full flex justify-between items-center sm:hidden">
+        <a href="/">
+          <h2 className="flex items-center gap-2 text-2xl font-bold text-amber-50">
+            <FaLaptopCode />
+            Portfolio<span className="animate-ping">..</span>
+          </h2>
+        </a>
 
-        <ul
-          ref={menuRef}
-          className="center  text-2xl font-extralight absolute top-18 -right-5 z-2 bg-[#0c0c0cdc] rounded-b-lg"
-          style={{ display: showMenu ? "flex" : "none" }}
-        >
-          <li className="nav-list">
-            <Link
-              activeClass="text-[#45f8b7] font-bold bg-[#1c2020f8] border-b-2 "
-              to="Hero"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={() => setShowMenu(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link
-              activeClass="text-[#45f8b7] font-bold"
-              to="About"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={() => setShowMenu(false)}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link
-              activeClass="text-[#45f8b7] font-bold"
-              to="Service"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={() => setShowMenu(false)}
-            >
-              Service
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link
-              activeClass="text-[#45f8b7] font-bold"
-              to="Skills"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={() => setShowMenu(false)}
-            >
-              Skills
-            </Link>
-          </li>
-          <li
-            className="nav-list"
-            onClick={() => {
-              const button = document.getElementById("contact-button");
-              button.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Contact me
-          </li>
-        </ul>
+        <Popover className="relative">
+          {({ open, close }) => (
+            <>
+              {/* Button */}
+              <Popover.Button className="cursor-pointer bg-emerald-600 p-1 rounded-md shadow-emerald-600/50 shadow-lg focus:outline-none">
+                {open ? (
+                  <MdClose size={40} className="text-white" />
+                ) : (
+                  <MdOutlineMenuOpen size={40} className="text-white" />
+                )}
+              </Popover.Button>
+
+              {/* Dropdown */}
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-2 scale-95"
+                enterTo="opacity-100 translate-y-0 scale-100"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0 scale-100"
+                leaveTo="opacity-0 translate-y-2 scale-95"
+              >
+                <Popover.Panel className="absolute right-0 top-14 w-sm rounded-b-lg bg-[#0c0c0cdc] backdrop-blur-md shadow-lg z-50">
+                  <ul className="w-full flex flex-col justify-center items-center text-2xl">
+                    {menu.map((item) => (
+                      <li
+                        key={item.to}
+                        className="px-6 py-4 text-white hover:text-[#3EB489] hover:bg-white/5 transition cursor-pointer"
+                        
+                      >
+                        <Link
+                          activeClass="text-[#45f8b7] font-bold bg-[#1c2020f8] border-b-2"
+                          to={item.to}
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                          offset={-50}
+                          onClick={() => close()}
+                          className="font-semibold"
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Popover.Panel>
+              </Transition>
+            </>
+          )}
+        </Popover>
       </nav>
     </header>
   );
