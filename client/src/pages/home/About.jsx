@@ -47,7 +47,7 @@ const About = () => {
 
             {/* Bio paragraphs */}
             <Reveal>
-              <div className="flex flex-col gap-4">
+              <div className="w-full max-sm:h-96 flex flex-col gap-4">
                 <p className="text-[15px] text-amber-50 leading-relaxed">
                   I'm a dedicated{" "}
                   <span className="text-white font-medium">
@@ -79,7 +79,7 @@ const About = () => {
 
             {/* Stats — left-border divider style */}
             <Reveal>
-              <div className="w-full h-20 flex justify-between items-center gap-0 mt-2 overflow-hidden">
+              <div className="w-full h-20 flex justify-between items-center gap-0 my-3 overflow-hidden">
                 {stats.map((stat, i) => (
                   <div
                     key={i}
@@ -103,6 +103,14 @@ const About = () => {
                 ))}
               </div>
             </Reveal>
+            <div>
+              <button
+                className="px-3 py-2 font-semibold bg-white text-emerald-600 hover:shadow-emerald-800 hover:shadow-md
+                   flex justify-center items-center gap-2 rounded-sm cursor-pointer"
+              >
+                Download CV
+              </button>
+            </div>
           </div>
 
           {/* ── Right Column ── */}
