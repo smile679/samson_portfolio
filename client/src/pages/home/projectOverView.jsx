@@ -14,6 +14,17 @@ function ProjectOverView() {
 
   const projects = [
     {
+      title: "Gefrem Engineering Website",
+      shortDescription:
+        "The Gefrem Engineering website was developed to establish a strong online presence for an engineering and construction company",
+      image:
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1782205362/gef_01_pjen9p.jpg",
+      link: "https://gefrem-engineering.vercel.app/",
+      github: "https://github.com/smile679/gefrem_Engineering.git",
+      category: "static",
+      tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
+    },
+    {
       title: "Merkato Gebeya Full-Stack App",
       shortDescription:
         "The Merkato eCommerce App was built to offer a smoother, more organized shopping experience for users who often face slow, cluttered, or confusing online stores",
@@ -22,7 +33,15 @@ function ProjectOverView() {
       link: "https://ecommerce-app-1-q5og.onrender.com/",
       github: "https://github.com/smile679/eCommerce-app.git",
       category: "fullstack",
-      tags: ["React", "Node.js", "MongoDB", "Tailwind"],
+      tags: [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React Router",
+        "Tailwind",
+      ],
     },
     {
       title: "Bakery Full-Stack App",
@@ -33,7 +52,15 @@ function ProjectOverView() {
       link: "https://bakery-full-stack-webisite-front.onrender.com/",
       github: "https://github.com/smile679/Bakery-Full-stack-Webisite.git",
       category: "fullstack",
-      tags: ["React", "Node.js", "MongoDB", "Tailwind"],
+      tags: [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React Router",
+        "Tailwind",
+      ],
     },
     {
       title: "Foodie Delight",
@@ -44,7 +71,7 @@ function ProjectOverView() {
       link: "https://foodiedelightapp.netlify.app/",
       github: "https://github.com/smile679/Foodie-Delight.git",
       category: "static",
-      tags: ["React", "Tailwind"],
+      tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
     },
     {
       title: "Movie Scope",
@@ -55,29 +82,18 @@ function ProjectOverView() {
       link: "https://moviescopapp.netlify.app/",
       github: "https://github.com/smile679/Movie-App.git",
       category: "static",
-      tags: ["React", "Tailwind"],
+      tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
     },
     {
-      title: "Foodie",
+      title: "Mobile Shop Management App",
       shortDescription:
-        "The Bakery Fullstack App was created to give customers and bakery owners a smoother, more organized online experience.",
+        "Product showcase and admin management system for a mobile phone shop, allowing customers to view available devices while enabling admins to manage inventory.",
       image:
-        "https://res.cloudinary.com/dineyc77u/image/upload/v1763846372/foodiehome2_hlitdu.webp",
-      link: "https://foodiedelightapp.netlify.app/",
-      github: "https://github.com/smile679/Foodie-Delight.git",
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1782205772/mobileShop_gzukzk.jpg",
+      link: "https://mobileshop-1mku.onrender.com/",
+      github: "https://github.com/smile679/mobileShop.git",
       category: "static",
-      tags: ["React", "Tailwind"],
-    },
-    {
-      title: "Scope",
-      shortDescription:
-        "MovieScope is a responsive movie discovery web application that allows users to browse trending films, search titles, and view detailed information",
-      image:
-        "https://res.cloudinary.com/dineyc77u/image/upload/v1763846926/movieScope_vhccly.webp",
-      link: "https://moviescopapp.netlify.app/",
-      github: "https://github.com/smile679/Movie-App.git",
-      category: "static",
-      tags: ["React", "Tailwind"],
+      tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
     },
   ];
 

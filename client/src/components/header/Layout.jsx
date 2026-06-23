@@ -38,7 +38,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full fixed top-0 left-0 z-10 px-5 py-3 shadow-lg backdrop-blur-md">
+    <header className="w-full fixed top-0 left-0 z-50 px-5 py-3 shadow-lg backdrop-blur-md">
       <nav className="max-w-6xl mx-auto hidden sm:flex items-center justify-between">
         <a href="/">
           <h2 className="flex items-center gap-2 sm:ml-5 text-2xl font-bold text-amber-50">
@@ -86,7 +86,7 @@ const Header = () => {
         )}
       </nav>
 
-      <nav className="w-full flex justify-between items-center sm:hidden">
+      <nav className="relative w-full flex justify-between items-center sm:hidden">
         <a href="/">
           <h2 className="flex items-center gap-2 text-2xl font-bold text-amber-50">
             <FaLaptopCode />
@@ -94,7 +94,7 @@ const Header = () => {
           </h2>
         </a>
 
-        <Popover className="relative">
+        <Popover>
           {({ open, close }) => (
             <>
               {/* Button */}
@@ -109,20 +109,19 @@ const Header = () => {
               {/* Dropdown */}
               <Transition
                 as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-2 scale-95"
-                enterTo="opacity-100 translate-y-0 scale-100"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0 scale-100"
-                leaveTo="opacity-0 translate-y-2 scale-95"
+                enter="transition-transform transition-opacity duration-300 ease-out origin-top"
+                enterFrom="opacity-0 scale-y-0"
+                enterTo="opacity-100 scale-y-100"
+                leave="transition-transform transition-opacity duration-200 ease-in origin-top"
+                leaveFrom="opacity-100 scale-y-100"
+                leaveTo="opacity-0 scale-y-0"
               >
-                <Popover.Panel className="absolute right-0 top-14 w-sm rounded-b-lg bg-[#0c0c0cdc] backdrop-blur-md shadow-lg z-50">
+                <Popover.Panel className="absolute left-0 right-0 top-16 rounded-b-lg bg-[#0c0c0cdc] backdrop-blur-md shadow-lg z-40">
                   <ul className="w-full flex flex-col justify-center items-center text-2xl">
                     {menu.map((item) => (
                       <li
                         key={item.to}
-                        className="px-6 py-4 text-white hover:text-[#3EB489] hover:bg-white/5 transition cursor-pointer"
-                        
+                        className=" px-6 py-4 text-white hover:text-[#3EB489] hover:bg-white/5 transition cursor-pointer"
                       >
                         <Link
                           activeClass="text-[#45f8b7] font-bold bg-[#1c2020f8] border-b-2"

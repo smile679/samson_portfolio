@@ -1,17 +1,17 @@
-import { FaGithub } from "react-icons/fa6";
 import { MdOutlineLiveTv } from "react-icons/md";
-import { FaPhoenixFramework } from "react-icons/fa6";
 import { SiGithub } from "react-icons/si";
 
 const MenuCard = ({ item }) => {
   return (
     <div className="relative w-full h-full md:max-w-md bg-emerald-900/45 border-emerald-500/30 border-[1px] backdrop-blur-md rounded-2xl overflow-hidden ">
-      <a href={item.link} target="_blank">
-        <img
-          src={item.image}
-          className="w-full max-h-70 object-cover transition-all duration-200"
-        />
-      </a>
+        <a href={item.link} target="_blank">
+      <div className="w-full max-h-70  overflow-hidden">
+          <img
+            src={item.image}
+            className="w-full h-full object-cover object-center transition-all duration-200 hover:scale-105"
+          />
+      </div>
+        </a>
       <div className="flex flex-col justify-between gap-3 px-5 pt-4 pb-5">
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-base font-semibold text-white leading-snug">

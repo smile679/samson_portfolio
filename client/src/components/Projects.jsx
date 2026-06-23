@@ -21,14 +21,6 @@ import Header from './header/Layout.jsx';
 
 const Projects = () => {
   const projectsData = [
-    // {
-    //   title: "Portfolio",
-    //   images: [portfolio],
-    //   description: "I designed and developed this portfolio website from scratch, starting from UI/UX layout to full implementation.It includes a clean Home page, structured About section, detailed Skills overview, and a fully functional Contact form.",
-    //   techStack: ["JavaScript", "React", "Tailwind CSS"],
-    //   demoLink: "https://samsongideyportifolio.netlify.app/",
-    //   githubLink: "https://github.com/smile679/samson_portifolio.git",
-    // },
     {
       title: "Bakery Fullstack App",
       images: [bakeryFront, bakeryListing],
@@ -179,21 +171,6 @@ const Projects = () => {
       ],
       demoLink: "https://mobileshop-1mku.onrender.com",
       githubLink: "https://github.com/smile679/mobileShop.git",
-    },
-    {
-      title: "Form Backend API",
-      images: [form],
-      description:
-        "Backend REST API built with Node.js and Express to handle user authentication, role-based access control, and image uploads.",
-      techStack: ["Node.js", "Express", "MongoDB", "JWT", "Multer", "dotenv"],
-      features: [
-        "User registration and secure login with JWT authentication",
-        "Role-based authorization for User and Admin access",
-        "Password update functionality for users",
-        "Image upload and deletion handled by Admin users",
-        "Protected routes and environment-based configuration",
-      ],
-      githubLink: "https://github.com/smile679/Form-backend-only.git",
     },
   ];
   
