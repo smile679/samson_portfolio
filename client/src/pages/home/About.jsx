@@ -115,8 +115,9 @@ const About = () => {
                   setIsLoading(true);
 
                   const link = document.createElement("a");
-                  link.href = "/Samison-Gidey-CV.pdf";
-                  link.download = "Samison-Gidey-CV.pdf";
+                  link.href =
+                    "\public\cv.pdf";
+                  link.download = "cv.pdf";
                   link.click();
                   setTimeout(() => setIsLoading(false), 1000);
                 }}
