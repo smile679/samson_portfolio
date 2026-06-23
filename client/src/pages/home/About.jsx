@@ -4,19 +4,23 @@ import {
   Database,
   Focus,
   Globe,
+  Loader,
   Sparkles,
 } from "lucide-react";
 import Reveal from "@/components/motions/Reveal";
 import CountUp from "../../components/motions/CountUp";
 import BlurText from "../../components/motions/BlurText";
+import { useState } from "react";
+import { MdOutlineDownloading } from "react-icons/md";
 
 const stats = [
-  { value: "45", label: "Happy Clients" },
-  { value: "2.5", label: "Code Commits" },
-  { value: "500", label: "GitHub Stars" },
+  { value: "10", label: "Happy Clients" },
+  { value: "1.5", label: "Code Commits" },
+  { value: "100", label: "GitHub Stars" },
 ];
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <section className="relative w-full bg-emerald-600 px-5 py-20" name="About">
       <div className="w-full max-w-6xl mx-auto">
@@ -47,7 +51,7 @@ const About = () => {
 
             {/* Bio paragraphs */}
             <Reveal>
-              <div className="w-full max-sm:h-96 flex flex-col gap-4">
+              <div className="w-full max-sm:h-96 flex flex-col gap-4 max-sm:my-5">
                 <p className="text-[15px] text-amber-50 leading-relaxed">
                   I'm a dedicated{" "}
                   <span className="text-white font-medium">
@@ -105,10 +109,28 @@ const About = () => {
             </Reveal>
             <div>
               <button
-                className="px-3 py-2 font-semibold bg-white text-emerald-600 hover:shadow-emerald-800 hover:shadow-md
+                className="w-50 place-content-center px-3 py-2 font-semibold bg-white hover:shadow-emerald-800 hover:shadow-md
                    flex justify-center items-center gap-2 rounded-sm cursor-pointer"
+                onClick={() => {
+                  setIsLoading(true);
+
+                  window.location.href =
+                    "https://drive.google.com/uc?export=download&id=1m6Fs1FJ5XRMrncbwvtY5z5eOgroKoCgO";
+
+                  setTimeout(() => setIsLoading(false), 1000);
+                }}
               >
-                Download CV
+                {isLoading ? (
+                  <p className="text-[18px] font-semibold text-emerald-600 flex items-center gap-2">
+                    <Loader className="animate-spin" />
+                    Downloading..
+                  </p>
+                ) : (
+                  <p className="text-[18px] font-semibold text-emerald-600 flex items-center gap-2">
+                    <MdOutlineDownloading size={20} />
+                    Download CV
+                  </p>
+                )}
               </button>
             </div>
           </div>
