@@ -107,7 +107,7 @@ const About = () => {
                 ))}
               </div>
             </Reveal>
-            <div>
+            <Reveal>
               <button
                 className="w-50 place-content-center px-3 py-2 font-semibold bg-white hover:shadow-emerald-800 hover:shadow-md
                    flex justify-center items-center gap-2 rounded-sm cursor-pointer"
@@ -115,8 +115,7 @@ const About = () => {
                   setIsLoading(true);
 
                   const link = document.createElement("a");
-                  link.href =
-                    "\public\cv.pdf";
+                  link.href = "../../../public/cv.pdf";
                   link.download = "cv.pdf";
                   link.click();
                   setTimeout(() => setIsLoading(false), 1000);
@@ -134,7 +133,7 @@ const About = () => {
                   </p>
                 )}
               </button>
-            </div>
+            </Reveal>
           </div>
 
           {/* ── Right Column ── */}
