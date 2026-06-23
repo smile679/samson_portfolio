@@ -114,7 +114,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="w-full max-w-6xl mx-auto center pt-10 sm:pt-20" id="contact-button">
+    <section className="w-full max-w-6xl mx-auto center pt-10 sm:pt-20" id="Contact">
       <Reveal>
         <div className="flex flex-row items-center pt-10">
           <svg

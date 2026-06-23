@@ -43,7 +43,7 @@ const MenuCard = ({ item }) => {
         </div>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed line-clamp-2 text-emerald-200/65">
+        <p className="text-xs leading-relaxed line-clamp-3 text-emerald-200/65">
           {item.shortDescription}
         </p>
 

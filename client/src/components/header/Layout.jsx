@@ -1,11 +1,8 @@
-import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import { useLocation } from "react-router-dom";
 import Reveal from "@/components/motions/Reveal";
-import phone from "@/assets/images/phone.png";
 import { FaLaptopCode } from "react-icons/fa";
-import { Home } from "lucide-react";
-import { MdOutlineMenuOpen } from "react-icons/md";
+import { MdConnectWithoutContact, MdOutlineMenuOpen } from "react-icons/md";
 
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -72,17 +69,17 @@ const Header = () => {
           </Reveal>
         )}
         {location.pathname === "/projects" ? null : (
-          <div
-            className="contact"
-            type="button"
+          <button
+            className="px-3 py-2 text-white bg-emerald-600 hover:bg-emerald-600/50
+            flex justify-center items-center gap-2 rounded-sm cursor-pointer"
             onClick={() => {
-              const button = document.getElementById("contact-button");
+              const button = document.getElementById("Contact");
               button.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <img src={phone} alt="contact" />
-            <h3>Contact Me</h3>
-          </div>
+            <MdConnectWithoutContact size={25} />
+            <h3>Hire Me</h3>
+          </button>
         )}
       </nav>
 
