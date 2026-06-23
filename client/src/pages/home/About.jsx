@@ -114,9 +114,10 @@ const About = () => {
                 onClick={() => {
                   setIsLoading(true);
 
-                  window.location.href =
-                    "https://drive.google.com/uc?export=download&id=1m6Fs1FJ5XRMrncbwvtY5z5eOgroKoCgO";
-
+                  const link = document.createElement("a");
+                  link.href = "/Samison-Gidey-CV.pdf";
+                  link.download = "Samison-Gidey-CV.pdf";
+                  link.click();
                   setTimeout(() => setIsLoading(false), 1000);
                 }}
               >
