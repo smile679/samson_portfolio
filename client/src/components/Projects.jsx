@@ -13,6 +13,7 @@ import gef_01 from "@/assets/images/projectImages/gef_01.jpg";
 import gef_02 from "@/assets/images/projectImages/gef_02.jpg";
 import bokra_01 from "@/assets/images/projectImages/bokra_01.png";
 import bokra_02 from "@/assets/images/projectImages/bokra_02.png";
+import cbe_01 from "@/assets/images/projectImages/cbe_verifier.png";
 
 
 import ProjectCard from './ProjectCard.jsx';
@@ -141,6 +142,22 @@ const Projects = () => {
       githubLink: "https://github.com/smile679/Foodie-Delight.git",
     },
     {
+      title: "Mobile Shop Management App",
+      images: [mobileShop, mobileShop2],
+      description:
+        "Product showcase and admin management system for a mobile phone shop, allowing customers to view available devices while enabling admins to manage inventory.",
+      techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+      features: [
+        "Public product listing for new and used mobile devices and accessories",
+        "Admin-only access to add, edit, and delete products",
+        "Device filtering by brand, condition, and storage options",
+        "Responsive UI optimized for mobile and desktop devices",
+        "Clean separation between admin and customer views",
+      ],
+      demoLink: "https://mobileshop-1mku.onrender.com",
+      githubLink: "https://github.com/smile679/mobileShop.git",
+    },
+    {
       title: "Movie Scope App",
       images: [movieScope2, movieScope],
       description:
@@ -157,20 +174,23 @@ const Projects = () => {
       githubLink: "https://github.com/smile679/Movie-App.git",
     },
     {
-      title: "Mobile Shop Management App",
-      images: [mobileShop, mobileShop2],
+      title: "CBE Receipt Verifier",
+      images: [cbe_01, cbe_01],
       description:
-        "Product showcase and admin management system for a mobile phone shop, allowing customers to view available devices while enabling admins to manage inventory.",
-      techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+        "A lightweight web tool that automates Commercial Bank of Ethiopia (CBE) receipt verification. Instead of manually constructing verification URLs, users simply enter an FT number and the last 8 digits of an account number — the tool instantly builds and opens the correct CBE verification link. Designed for anyone in Ethiopia who regularly verifies CBE transaction receipts, with a clean minimal UI and keyboard-first UX built for speed.",
+      techStack: ["JavaScript", "React", "Tailwind CSS", "Vite"],
       features: [
-        "Public product listing for new and used mobile devices and accessories",
-        "Admin-only access to add, edit, and delete products",
-        "Device filtering by brand, condition, and storage options",
-        "Responsive UI optimized for mobile and desktop devices",
-        "Clean separation between admin and customer views",
+        "Instant CBE verification URL construction",
+        "Live URL preview with color-coded segments",
+        "One-click receipt verification in new tab",
+        "Copy URL to clipboard with visual confirmation",
+        "Keyboard navigation (Enter to jump fields and verify)",
+        "Input validation before enabling verify button",
+        "Responsive and mobile-friendly layout",
+        "Clean green UI matching CBE brand identity",
       ],
-      demoLink: "https://mobileshop-1mku.onrender.com",
-      githubLink: "https://github.com/smile679/mobileShop.git",
+      demoLink: "https://cbe-verifier-1.vercel.app/",
+      githubLink: "https://github.com/smile679/cbe_verifier-1",
     },
   ];
   
