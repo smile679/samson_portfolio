@@ -120,7 +120,7 @@ const About = () => {
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
-                  
+
                   setTimeout(() => setIsLoading(false), 1000);
                 }}
               >
