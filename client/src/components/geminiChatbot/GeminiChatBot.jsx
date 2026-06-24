@@ -46,14 +46,14 @@ export default function GeminiChatbot() {
               <div
                 className={`w-full inline-block px-4 py-2 rounded-xl overflow-hidden ${
                   m.role === "user"
-                    ? "bg-amber-500/20 max-w-1/2"
-                    : "bg-white/10 max-w-3/4"
+                    ? "bg-amber-500/20 max-w-3/4"
+                    : "bg-white/10 w-full"
                 }`}
               >
                 <p className="text-[12px] sm:text-sm text-white sm:leading-6 whitespace-pre-wrap text-pretty text-start">
                   <TypeIt
                     options={{
-                      speed: 50,
+                      speed: 10,
                       waitUntilVisible: true,
                       cursor: false,
                     }}
