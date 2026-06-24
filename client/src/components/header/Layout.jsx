@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 px-5 py-3 shadow-lg backdrop-blur-md">
-      <nav className="max-w-6xl mx-auto hidden sm:flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto hidden md:flex items-center justify-between">
         <a href="/">
           <h2 className="flex items-center gap-2 sm:ml-5 text-2xl font-bold text-amber-50">
             <FaLaptopCode />
@@ -83,7 +83,7 @@ const Header = () => {
         )}
       </nav>
 
-      <nav className="relative w-full flex justify-between items-center sm:hidden">
+      <nav className="relative w-full flex justify-between items-center md:hidden">
         <a href="/">
           <h2 className="flex items-center gap-2 text-2xl font-bold text-amber-50">
             <FaLaptopCode />
