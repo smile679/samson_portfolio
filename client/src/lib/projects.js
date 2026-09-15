@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: "JOZY Tech Digital Menu SaaS",
+    shortDescription:
+      "A multi-tenant digital menu platform giving restaurants and cafés their own branded menu with a QR code and subdomain, managed through a Super Admin dashboard (manages all venues) and an Owner dashboard (each venue manages its own menu).",
+    image: "https://res.cloudinary.com/dineyc77u/image/upload/v1789481964/dash_r6egxv.png",
+    link: "https://dashboard.jozytech.com",
+    github: "https://github.com/smile679",
+    category: "fullstack",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind Css", "JWT"],
+  },
+  {
     title: "Gefrem Engineering Website",
     shortDescription:
       "The Gefrem Engineering website was developed to establish a strong online presence for an engineering and construction company",
