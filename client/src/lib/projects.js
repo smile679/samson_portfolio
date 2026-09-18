@@ -5,7 +5,7 @@ export const projects = [
       "A multi-tenant digital menu platform giving restaurants and cafés their own branded menu with a QR code and subdomain, managed through a Super Admin dashboard (manages all venues) and an Owner dashboard (each venue manages its own menu).",
     image: "https://res.cloudinary.com/dineyc77u/image/upload/v1789481964/dash_r6egxv.png",
     link: "https://dashboard.jozytech.com",
-    github: "https://github.com/smile679",
+    github: "#",
     category: "fullstack",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind Css", "JWT"],
   },
@@ -61,7 +61,7 @@ export const projects = [
   {
     title: "Foodie Delight",
     shortDescription:
-      "The Bakery Fullstack App was created to give customers and bakery owners a smoother, more organized online experience.",
+      "The Foodie Delight App was created to give customers and bakery owners a smoother, more organized online experience.",
     image:
       "https://res.cloudinary.com/dineyc77u/image/upload/v1763846372/foodiehome2_hlitdu.webp",
     link: "https://foodiedelightapp.netlify.app/",
@@ -69,17 +69,17 @@ export const projects = [
     category: "static",
     tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
   },
-  {
-    title: "Movie Scope",
-    shortDescription:
-      "MovieScope is a responsive movie discovery web application that allows users to browse trending films, search titles, and view detailed information",
-    image:
-      "https://res.cloudinary.com/dineyc77u/image/upload/v1763846926/movieScope_vhccly.webp",
-    link: "https://moviescopapp.netlify.app/",
-    github: "https://github.com/smile679/Movie-App.git",
-    category: "static",
-    tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
-  },
+  // {
+  //   title: "Movie Scope",
+  //   shortDescription:
+  //     "MovieScope is a responsive movie discovery web application that allows users to browse trending films, search titles, and view detailed information",
+  //   image:
+  //     "https://res.cloudinary.com/dineyc77u/image/upload/v1763846926/movieScope_vhccly.webp",
+  //   link: "https://moviescopapp.netlify.app/",
+  //   github: "https://github.com/smile679/Movie-App.git",
+  //   category: "static",
+  //   tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
+  // },
   {
     title: "Mobile Shop Management App",
     shortDescription:

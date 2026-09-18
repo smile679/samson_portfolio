@@ -14,8 +14,6 @@ function App() {
       setLoading(false);
     };
 
-
-
     // If everything is already loaded
     if (document.readyState === "complete") {
       handleLoad();
@@ -28,14 +26,14 @@ function App() {
     };
   }, []);
 
-    useEffect(() => {
-      const tg = window.Telegram?.WebApp;
+  useEffect(() => {
+    const tg = window.Telegram?.WebApp;
 
-      if (tg) {
-        tg.ready();
-        tg.expand();
-      }
-    }, []);
+    if (tg) {
+      tg.ready();
+      tg.expand();
+    }
+  }, []);
 
   if (loading) {
     return <Loader />;

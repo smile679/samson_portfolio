@@ -5,6 +5,35 @@ import Header from './header/Layout.jsx';
 const Projects = () => {
   const projectsData = [
     {
+      title: "JOZY Tech Digital Menu SaaS",
+      images: [
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1789481963/jozy_kmhfuc.png",
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1789481964/dash_r6egxv.png",
+      ],
+      description:
+        "A multi-tenant digital menu platform for JOZY Tech, giving restaurants, hotels, and cafes their own branded digital menu with a permanent QR code and subdomain. The platform runs on two dashboards: a Super Admin dashboard where JOZY Tech creates and manages every venue, owner account, and subscription plan across the whole platform, and an Owner dashboard where each venue manages its own categories, menu items, images, and branding. Data is strictly isolated per venue at the backend, with role-based JWT authentication and a fast, mobile-first public menu served independently of the dashboards.",
+      techStack: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Cloudinary",
+      ],
+      features: [
+        "Super Admin dashboard to create/manage all venues, owners, and plans platform-wide",
+        "Owner dashboard scoped to a single venue's categories, menu items, and branding",
+        "Permanent QR code and unique subdomain per venue",
+        "Strict tenant data isolation enforced at the backend",
+        "Role-based JWT authentication in secure httpOnly cookies",
+        "Mobile-first public menu with category navigation and search",
+      ],
+      demoLink: "https://dashboard.jozytech.com",
+      githubLink: "#", s
+    },
+    {
       title: "Applicant Management Dashboard",
       images: [
         "https://res.cloudinary.com/dineyc77u/image/upload/v1784958952/Annotation_2026-07-25_084507_rwpioq.png",
@@ -12,7 +41,7 @@ const Projects = () => {
       ],
       description:
         "Built as a frontend challenge for an internship application, this admin dashboard lets a hiring administrator manage internship applicants end-to-end against a real REST API. Admins can log in, browse a paginated applicant list with live search, filtering, and sorting, drill into a full applicant profile, update application status, leave internal notes, and view summary statistics with charts. The app is fully responsive and handles loading, empty, error, and expired-session states throughout, with a centralized Axios layer that automatically attaches auth tokens and redirects on session expiry.",
-         techStack: [
+      techStack: [
         "JavaScript",
         "React",
         "Vite",
@@ -226,7 +255,7 @@ const Projects = () => {
       githubLink: "https://github.com/smile679/cbe_verifier-1",
     },
   ];
-  
+
   return (
     <section id="projectId" className="max-w-6xl mx-auto min-h-screen flex flex-col py-10 px-5">
       <Header />
