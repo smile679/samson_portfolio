@@ -65,7 +65,7 @@ const Projects = () => {
         "Mobile-first public menu with category navigation and search",
       ],
       demoLink: "https://dashboard.jozytech.com",
-      githubLink: "https://github.com/smile679/",
+      githubLink: "#",
     },
     {
       title: "Applicant Management Dashboard",
