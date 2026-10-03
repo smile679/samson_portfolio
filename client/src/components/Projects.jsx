@@ -5,6 +5,40 @@ import Header from './header/Layout.jsx';
 const Projects = () => {
   const projectsData = [
     {
+      title: "Employee Payroll Management System",
+      images: [
+        // Add your project screenshots here
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1791024336/p1_rfnaqp.png",
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1791024336/p2_hykfvs.png",
+      ],
+      description:
+        "A secure employee salary management system built for organizations to manage employees, salary payments, and administrative activity. The system uses role-based access control with Super Admin and Admin roles, allowing Super Admins to manage administrators while authorized admins manage employee records and salary payment status. An audit log system records important administrative actions for accountability and traceability.",
+      techStack: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Helmet",
+        "Rate Limiting",
+      ],
+      features: [
+        "Super Admin and Admin role-based access control",
+        "Secure JWT authentication using httpOnly cookies",
+        "Employee CRUD and salary management",
+        "Paid/unpaid salary tracking",
+        "Employee active/inactive status management",
+        "Administrative audit logging",
+        "Protected API routes and authorization middleware",
+        "Security headers with Helmet and API rate limiting",
+      ],
+      demoLink: "https://payrole-managment-system-front.onrender.com/",
+      githubLink: "https://github.com/smile679/",
+    },
+    {
       title: "JOZY Tech Digital Menu SaaS",
       images: [
         "https://res.cloudinary.com/dineyc77u/image/upload/v1789481963/jozy_kmhfuc.png",
@@ -31,7 +65,7 @@ const Projects = () => {
         "Mobile-first public menu with category navigation and search",
       ],
       demoLink: "https://dashboard.jozytech.com",
-      githubLink: "#",
+      githubLink: "https://github.com/smile679/",
     },
     {
       title: "Applicant Management Dashboard",
@@ -178,7 +212,7 @@ const Projects = () => {
       images: [
         "https://res.cloudinary.com/dineyc77u/image/upload/v1763846372/foodiehome2_hlitdu.webp",
         // "https://res.cloudinary.com/dineyc77u/image/upload/v1784960672/foodie2_nbypda.webp",
-        "https://res.cloudinary.com/dineyc77u/image/upload/v1785576265/Annotation_2026-08-01_122059_uu2tt9.png"
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1785576265/Annotation_2026-08-01_122059_uu2tt9.png",
       ],
       description:
         "The Bakery Fullstack App was created to give customers and bakery owners a smoother, more organized online experience. Many local bakeries have great products but lack an easy way for customers to explore items, view details, or place orders without confusion. This application solves that by offering a clean marketplace where users can browse breads, pastries, and cakes, read descriptions, add items to their cart, and check out with a simple flow. At the same time, the admin panel allows bakery owners to manage products and content efficiently, creating a unified system that keeps both sides connected and reduces the friction found in typical bakery websites.",
