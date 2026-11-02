@@ -1,38 +1,39 @@
-import { useAnimation, useInView, motion, scale } from "framer-motion";
-import { useEffect, useRef } from "react"
+import { useAnimation, useInView, motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-
- const RevealX = ({ children }) => {
-   const ref = useRef(null);
-   const inView = useInView(ref, { once: "true", amount: 0.2 })
-   const controls = useAnimation();
-   const variants = {
-    hidden: {opacity: 0, x: -200,},
-    visible: {opacity: 1, x: 0,
+const RevealX = ({ children, className = "" }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.2 });
+  const controls = useAnimation();
+  const variants = {
+    hidden: { opacity: 0, x: -200 },
+    visible: {
+      opacity: 1,
+      x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
     }
-   }
+  }, [inView, controls]);
 
-   useEffect(()=>{
-     if(inView){
-      controls.start(controls.start("visible"));
-     }
-   }, [inView, controls])
-  return(
+  return (
     <motion.div
-     ref={ref}
-     initial= "hidden"
-     variants= { variants }
-     animate= { controls }
-    // className="overflow-x-hidden"
+      ref={ref}
+      initial="hidden"
+      variants={variants}
+      animate={controls}
+      className={className}
     >
-     { children }
+      {children}
     </motion.div>
-  )
-
-}
+  );
+};
 
 export default RevealX;

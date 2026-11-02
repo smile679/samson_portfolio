@@ -59,15 +59,14 @@ export const projects = [
     ],
   },
   {
-    title: "Foodie Delight",
+    title: "Yabets Spa Website & Admin Dashboard",
     shortDescription:
-      "The Foodie Delight App was created to give customers and bakery owners a smoother, more organized online experience.",
-    image:
-      "https://res.cloudinary.com/dineyc77u/image/upload/v1763846372/foodiehome2_hlitdu.webp",
-    link: "https://foodiedelightapp.netlify.app/",
-    github: "https://github.com/smile679/Foodie-Delight.git",
-    category: "static",
-    tags: ["JavaScript", "React", "React Router", "Tailwind Css"],
+      "A production website and admin dashboard for a ladies' hair salon and spa in Addis Ababa. Visitors browse services and the gallery and send appointment requests, while the owner manages services, photos, website content and requests from a secure dashboard, with no code changes needed.",
+    image: "https://res.cloudinary.com/dineyc77u/image/upload/v1793653964/s1_hasuct.png",
+    link: "https://www.yabets-spa.com",
+    github: "#",
+    category: "fullstack",
+    tags: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Tailwind Css", "JWT"],
   },
   // {
   //   title: "Movie Scope",

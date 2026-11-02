@@ -4,10 +4,11 @@ import { SiGithub } from "react-icons/si";
 const MenuCard = ({ item }) => {
   return (
     <div className="relative w-full h-full md:max-w-md bg-emerald-900/45 border-emerald-500/30 border-[1px] backdrop-blur-md rounded-2xl overflow-hidden ">
-        <a href={item.link} target="_blank">
-      <div className="w-full max-h-70  overflow-hidden">
+        <a href={item.link} target="_blank" rel="noopener noreferrer">
+      <div className="w-full max-h-70 overflow-hidden">
           <img
             src={item.image}
+            alt={item.title}
             className="w-full h-full object-cover object-center transition-all duration-200 hover:scale-105"
           />
       </div>

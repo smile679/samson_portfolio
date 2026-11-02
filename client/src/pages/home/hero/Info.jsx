@@ -89,8 +89,8 @@ const Info = () =>{
             <button
               className="button mr-5 xs:mr-10"
               onClick={() => {
-                const button = document.getElementById("contact-button");
-                button.scrollIntoView({ behavior: "smooth" });
+                const target = document.getElementById("Contact");
+                target?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Let's talk

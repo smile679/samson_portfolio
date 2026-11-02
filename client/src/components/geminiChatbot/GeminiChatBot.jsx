@@ -17,11 +17,11 @@ export default function GeminiChatbot() {
   }
 
   return (
-    <div className="w-full max-w-sm flex flex-col fixed bottom-5 right-2 sm:right-5 pl-5">
+    <div className="w-full max-w-sm flex flex-col fixed bottom-5 right-2 sm:right-5 pl-5 z-50">
       <div
         className={
           icon
-            ? " bg-emerald-800 rounded-2xl p-4 shadow-lg border border-white z-400"
+            ? " bg-emerald-800 rounded-2xl p-4 shadow-lg border border-white z-50"
             : "hidden"
         }
       >
@@ -98,8 +98,9 @@ export default function GeminiChatbot() {
           </button>
         </form>
       </div>
+
       <div
-        className="flex flex-col justify-center items-center self-end hover:cursor-pointer animate-puls"
+        className="flex flex-col justify-center items-center self-end hover:cursor-pointer animate-pulse"
         onClick={() => setIcon(true)}
       >
         <img

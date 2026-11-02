@@ -33,6 +33,7 @@ const ContactMe = () => {
     if (action.type === "reset") {
       return { Name: "", Email: "", Message: "" };
     }
+    return error;
   }
 
   const [mail, dispatchMail] = useReducer(setMail, {

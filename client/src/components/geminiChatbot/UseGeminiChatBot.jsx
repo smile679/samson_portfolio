@@ -44,7 +44,7 @@ export default function useGeminiChat() {
         throw new Error('Missing Gemini API key. Set VITE_GEMINI_API_KEY in .env');
       }
 
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
       const body = {
         contents: [

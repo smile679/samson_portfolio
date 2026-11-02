@@ -5,6 +5,46 @@ import Header from './header/Layout.jsx';
 const Projects = () => {
   const projectsData = [
     {
+      title: "Yabets Spa Website & Admin Dashboard",
+      images: [
+        // Add your project screenshots here (see the notes below)
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1793653964/s1_hasuct.png",
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1793653965/s3_vsyxu0.png",
+        "https://res.cloudinary.com/dineyc77u/image/upload/v1793653961/s2_ntnjnb.png",
+      ],
+      description:
+        "A production website and admin dashboard built for a ladies' hair salon and spa in Addis Ababa. Visitors can browse services and a photo gallery, find contact details, opening hours and a map, and send an appointment request. The owner logs in to a secure dashboard to manage services, gallery photos, website content and appointment requests without editing any code. Every request goes through a manual review workflow, so an appointment is never shown as confirmed until the owner confirms it. The project includes search engine optimization, and it is deployed with a custom domain.",
+      techStack: [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Router",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "Cloudinary",
+        "Zod",
+        "JWT",
+        "Helmet",
+        "Rate Limiting",
+      ],
+      features: [
+        "Secure owner login with JWT in httpOnly cookies, bcrypt password hashing and login rate limiting",
+        "Server-side authorization on every admin route, with no public admin registration",
+        "Services management with categories, display order, visibility and photo upload",
+        "Gallery management with Cloudinary image uploads, file type, size and content checks, and publish/hide control",
+        "Website settings editor for business info, hero text, opening hours, social links and logo",
+        "Appointment request workflow (pending, confirmed, rejected, completed, cancelled) with backend-validated status changes and private admin notes",
+        "Public pages with category filters, image lightbox, contact map and a validated appointment request form",
+        "Input validation with Zod, protection against mass assignment and NoSQL injection, Helmet security headers and CSRF origin checks",
+        "SEO with per-page meta tags, sitemap, structured data and Google indexing, plus automatic retry for slow server wake-ups",
+      ],
+      demoLink: "https://www.yabets-spa.com",
+      githubLink: "https://github.com/smile679/",
+    },
+    {
       title: "Employee Payroll Management System",
       images: [
         // Add your project screenshots here

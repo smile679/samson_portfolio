@@ -235,7 +235,7 @@ const SkillCard = ({ title, items }) => {
       ([entry]) => {
         if (entry.isIntersecting) setTriggered(true);
       },
-      { threshold: 1 },
+      { threshold: 0.2 },
     );
     obs.observe(el);
     return () => obs.disconnect();

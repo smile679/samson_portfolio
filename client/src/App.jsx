@@ -4,6 +4,7 @@ import Home from './components/home/Layout';
 import Projects from './components/Projects';
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader';
+import ScrollToTop from './components/common/ScrollToTop';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

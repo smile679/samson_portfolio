@@ -1,12 +1,14 @@
 import RevealX from "@/components/motions/RevealX";
 import Tilt from "react-parallax-tilt";
 import smile2 from "@/assets/images/smile2.png";
+import codeImg from "@/assets/images/code.png";
 
 const Image = () => {
   return (
     <div
       className="w-full flex justify-center items-start drop-shadow-[#3EB489] drop-shadow-2xl
-      bg-[url('./images/code.png')] bg-cover bg-no-repeat bg-blend-overlay p-10 overflow-hidden"
+      bg-cover bg-no-repeat bg-blend-overlay p-10 overflow-hidden"
+      style={{ backgroundImage: `url(${codeImg})` }}
     >
       <RevealX>
         <Tilt className="cursor-pointer" perspective={500} scale={1.05}>
